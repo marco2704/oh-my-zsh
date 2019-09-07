@@ -81,6 +81,8 @@ prompt_end() {
   fi
   echo -n "%{%f%}"
   CURRENT_BG=''
+
+  printf "\n\u2B80"
 }
 
 ### Prompt components
@@ -240,8 +242,8 @@ prompt_aws() {
 build_prompt() {
   RETVAL=$?
   prompt_status
-  prompt_virtualenv
-  prompt_aws
+  #prompt_virtualenv
+  #prompt_aws
   prompt_context
   prompt_dir
   prompt_git
